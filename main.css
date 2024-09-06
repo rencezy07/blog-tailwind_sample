@@ -39,72 +39,59 @@ html {
   color: #4a5568;
 }
 
-/* Expertise Card Styling */
+/* Expertise Section Styling */
+.expertise-section {
+  background-color: #f7fafc; /* Light gray background */
+}
+
+.section-title {
+  color: #2d3748; /* Dark gray text */
+}
+
+.section-subtitle {
+  color: #4a5568; /* Medium gray text */
+}
+
 .expertise-card {
-  position: relative;
-  overflow: hidden;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  background-color: #ffffff; /* White card background */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .expertise-card:hover {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Scale up on hover */
 }
 
-.expertise-card .card-title {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #2d3748;
-  transition: color 0.3s ease;
+.card-title {
+  color: #2d3748; /* Dark gray text */
 }
 
-.expertise-card:hover .card-title {
-  color: #5a67d8;
+.card-text {
+  color: #718096; /* Light gray text */
 }
 
-.expertise-card .card-text {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #718096;
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.5rem; /* Adjust font size for larger screens */
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem; /* Adjust font size for larger screens */
+  }
 }
 
-/* Hover Overlay Effect */
-.expertise-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #5a67d8;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 3rem; /* Adjust font size for larger screens */
+  }
+
+  .section-subtitle {
+    font-size: 1.5rem; /* Adjust font size for larger screens */
+  }
 }
 
-.expertise-card:hover::before {
-  opacity: 0.2;
-}
-
-/* Utility Classes for Grid Layout */
-.grid {
-  display: grid;
-}
-
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.md\:grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.lg\:grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.gap-8 {
-  grid-gap: 2rem;
-}
 
 /* Feedback Section Styling */
 .feedback-card {
