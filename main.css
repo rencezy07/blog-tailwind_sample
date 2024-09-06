@@ -19,6 +19,263 @@ html {
   }
 }
 
+
+
+/* Container and Section Styling */
+.expertise-section {
+  background-color: #f7fafc;
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.section-subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  color: #4a5568;
+}
+
+/* Expertise Card Styling */
+.expertise-card {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.expertise-card:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.expertise-card .card-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748;
+  transition: color 0.3s ease;
+}
+
+.expertise-card:hover .card-title {
+  color: #5a67d8;
+}
+
+.expertise-card .card-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #718096;
+}
+
+/* Hover Overlay Effect */
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #5a67d8;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.expertise-card:hover::before {
+  opacity: 0.2;
+}
+
+/* Utility Classes for Grid Layout */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lg\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-8 {
+  grid-gap: 2rem;
+}
+
+/* Feedback Section Styling */
+.feedback-card {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+}
+
+.feedback-category {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-family: 'Roboto', sans-serif;
+  color: #38a169;
+  background-color: #e6fffa;
+  border-radius: 9999px;
+}
+
+.feedback-title {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  transition: color 0.3s ease;
+}
+
+.feedback-title:hover {
+  color: #38a169;
+}
+
+.feedback-date,
+.feedback-read-time {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #2d3748;
+}
+
+.feedback-separator {
+  margin: 0 0.5rem;
+  color: #a0aec0;
+}
+
+/* Dark Mode Adjustments */
+.dark .feedback-category {
+  background-color: #48bb78;
+  color: #e6fffa;
+}
+
+.dark .feedback-title {
+  color: #edf2f7;
+}
+
+.dark .feedback-title:hover {
+  color: #68d391;
+}
+
+.dark .feedback-date,
+.dark .feedback-read-time {
+  color: #e2e8f0;
+}
+
+.feedback-category.bg-yellow-light {
+  background-color: #faf089;
+}
+
+.feedback-category.text-yellow-dark {
+  color: #d69e2e;
+}
+
+.feedback-category.bg-blue-light {
+  background-color: #bee3f8;
+}
+
+.feedback-category.text-blue {
+  color: #3182ce;
+}
+
+/* contact section */
+/* Contact Section Styling */
+.contact-section {
+  position: relative;
+  background-color: #f7fafc;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+/* Contact Information */
+.contact-info {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.contact-info img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.contact-info p {
+  font-size: 1.125rem;
+  color: #2d3748;
+  margin-top: 0.5rem;
+}
+
+.contact-info p.dark\:text-white {
+  color: #f7fafc;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  background-color: #edf2f7;
+  border: 1px solid #cbd5e0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form .cta-button {
+  background-color: #4299e1;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form .cta-button:hover {
+  background-color: #38a169;
+}
+
+/* Decorative Background Circles */
+.contact-section .absolute {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.contact-section .absolute.bg-blue-300 {
+  background-color: #90cdf4;
+}
+
+.contact-section .absolute.bg-green-200 {
+  background-color: #c6f6d5;
+}
+
+@media (min-width: 1024px) {
+  .contact-info, .contact-form {
+    text-align: left;
+  }
+}
+
+
+
 .twitter-card {
   @apply mt-8 mb-8 rounded bg-yellow-lighter px-6 py-8 sm:mt-10 sm:mb-10 md:px-10;
 
